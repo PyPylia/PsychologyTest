@@ -76,6 +76,7 @@ public class PsychologyTestModule : EverestModule
 
     private static void AddScoreDisplay(Level level)
     {
+        level.Session.FirstLevel = false;
         if (Settings.CurrentTestMode != TestMode.Control && level.Session.Area.ID != 0)
         {
             level.Add(new ScoreDisplay());
@@ -90,7 +91,7 @@ public class PsychologyTestModule : EverestModule
         }
     }
 
-        private static void TransitionLevel(Level level, LevelData next, Vector2 direction)
+    private static void TransitionLevel(Level level, LevelData next, Vector2 direction)
     {
         if (
             Session.levelsReached.Add(next.Name) &&
