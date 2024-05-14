@@ -1,0 +1,6 @@
+- Name: PsychologyTest
+  Version: 0.1.0
+  DLL: bin/PsychologyTest.dll
+  Dependencies:
+    - Name: EverestCore
+      Version: 1.4771.0
